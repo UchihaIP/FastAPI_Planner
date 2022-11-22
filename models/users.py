@@ -6,6 +6,7 @@ from models.events import Event
 
 class User(BaseModel):
     email: EmailStr
+    username: str
     password: str
     events: Optional[List[Event]]
 
@@ -13,6 +14,7 @@ class User(BaseModel):
         schema_extra = {
             "example": {
                 "email": "youemail@mail.ru",
+                "username": "Madara",
                 "password": "cool_password",
                 "events": [],
             }
